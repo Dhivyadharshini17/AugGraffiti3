@@ -82,8 +82,11 @@ public class LoginActivity extends AppCompatActivity implements
             updateUI(true);
         } else {
             // Signed out, show unauthenticated UI.
-            updateUI(false);
-        }
+            updateUI(false);}
+            Intent intent= new Intent(LoginActivity.this, MapsActivity.class);
+            intent.setPackage("com.google.android.apps.maps");
+            startActivity(intent);
+
         }
     private void updateUI(boolean signedIn) {
         if (signedIn) {
